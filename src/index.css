@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-inter
+    }
+}
+
+@layer components {
+    .nav-link {
+        @apply font-normal text-base leading-[100%] text-col-1 p-[10px] inline-block hover:scale-110 transition-transform duration-300
+    }
+
+    .nav-right {
+        @apply font-normal text-base py-2 px-[10px] text-col-1 border border-col-2 rounded-[5px] hover:scale-110 transition-transform duration-300 inline-block
+    }
+
+    .featured-link {
+        @apply font-normal text-xs lg:text-sm leading-[170%] text-col-1 hover:scale-110 transition-transform duration-300 inline-block
+    }
+
+}
+
+@layer utilities {
+    .line::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        border: 1px solid #1f1f1f;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+}
